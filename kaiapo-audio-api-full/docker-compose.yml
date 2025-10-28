@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo:6.0
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: kaiapo_audio_db
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - "27017:27017"
+
+  api:
+    build: .
+    command: npm run dev
+    volumes:
+      - ./:/usr/src/app
+      - ./uploads:/usr/src/app/uploads
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/kaiapo_audio_db
+    depends_on:
+      - mongo
+
+volumes:
+  mongo-data:
