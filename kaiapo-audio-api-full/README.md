@@ -1,4 +1,4 @@
-#Residência "Kaiapo"
+#Residência "Kayapo"
 
 Projeto exemplo de uma API RESTful em Node.js + Express no padrão MVC para gerenciar uploads de áudios explicativos.
 Inclui suporte a armazenamento local e integração opcional com AWS S3.
