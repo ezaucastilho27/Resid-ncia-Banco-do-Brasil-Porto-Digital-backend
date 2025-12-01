@@ -43,7 +43,7 @@ exports.uploadFile = async (file) => {
       Expires: 60 * 60
     });
 
-    return { filename, storage: 's3' };
+    return { filename, storage: 's3', url };
   } else {
     const filepath = path.join(uploadsDir, filename);
     await writeFile(filepath, file.buffer);
@@ -60,7 +60,7 @@ exports.getFileInfo = async (filename) => {
       Key: filename,
       Expires: 60 * 60
     });
-    return { storage: 'b2', filename, url };
+    return { storage: 's3', filename, url };
   } else {
     const filepath = path.join(uploadsDir, filename);
     if (!fs.existsSync(filepath)) return null;
