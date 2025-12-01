@@ -6,6 +6,7 @@ const AudioSchema = new mongoose.Schema({
   agreePrivacy: { type: Boolean, required: true },
   community: { type: String, required: true },
   service: { type: String, required: true },
+  rating: { type: Number, required: true, default: 0 },
   filename: { type: String, required: true },
   storage: { type: String, enum: ['local','s3'], default: 'local' },
   url: { type: String }, // URL acessível (S3 ou rota local)

@@ -9,6 +9,9 @@ router.post('/', upload.single('audio'), audioController.uploadAudio);
 // GET lista
 router.get('/', audioController.listAudios);
 
+// GET lista por serviço
+router.get('/:serviceId', audioController.listAudioByService)
+
 // GET detalhe
 router.get('/:id', audioController.getAudio);
 

@@ -45,6 +45,17 @@ exports.listAudios = async (req, res) => {
   }
 };
 
+exports.listAudioByService = async (req, res) => {
+  try {
+    const { serviceId } = req.params;
+    const audio = await Audio.find({ service: serviceId }).sort({ rating: -1 });
+    res.json(audio);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Erro ao buscar áudios' });
+  }
+}
+
 exports.getAudio = async (req, res) => {
   try {
     const { id } = req.params;
