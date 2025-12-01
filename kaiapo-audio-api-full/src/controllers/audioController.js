@@ -23,7 +23,6 @@ exports.uploadAudio = async (req, res) => {
       service,
       filename: storeResult.filename,
       storage: storeResult.storage,
-      url: storeResult.url,
       size: file.size,
       mimeType: file.mimetype
     });
