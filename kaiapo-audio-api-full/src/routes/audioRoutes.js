@@ -11,10 +11,10 @@ router.post('/', upload.single('audio'), audioController.uploadAudio);
 router.post('/audio/:id/like/:action', audioController.likeAudio);
 
 // POST adicionar servicos
-router.post('/servicos', serviceController.addService)
+router.post('/services', serviceController.addService)
 
 // GET lista de serviços
-router.get('/servicos', serviceController.listServices)
+router.get('/services', serviceController.listServices)
 
 // GET lista
 router.get('/audios', audioController.listAudios);
