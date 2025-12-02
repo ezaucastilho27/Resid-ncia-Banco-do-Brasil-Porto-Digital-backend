@@ -13,6 +13,9 @@ router.post('/audio/:id/like/:action', audioController.likeAudio);
 // POST adicionar servicos
 router.post('/servicos', serviceController.addService)
 
+// GET lista de serviços
+router.post('/servicos', serviceController.listServices)
+
 // GET lista
 router.get('/audios', audioController.listAudios);
 
