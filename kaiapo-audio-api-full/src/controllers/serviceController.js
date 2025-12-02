@@ -63,9 +63,9 @@ exports.updateService = async (req, res) => {
 
 exports.deleteService = async (req, res) => {
   try {
-    const { id } = req.params;
+    const { serviceId } = req.params;
 
-    const deletedService = await Service.findByIdAndDelete(id);
+    const deletedService = await Service.findByIdAndDelete(serviceId);
 
     if (!deletedService) {
       return res.status(404).json({ error: "Serviço não encontrado" });
