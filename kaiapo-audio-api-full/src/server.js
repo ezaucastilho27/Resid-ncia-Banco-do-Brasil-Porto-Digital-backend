@@ -8,7 +8,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 connectDB()
   .then(() => {
     app.listen(PORT, () => {
-      console.log(`Servidor rodando em ${MONGODB_URI}:${PORT}`);
+      console.log(`Servidor rodando na porta ${PORT}`);
     });
   })
   .catch(err => {
