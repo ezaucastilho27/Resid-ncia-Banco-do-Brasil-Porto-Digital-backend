@@ -9,9 +9,9 @@ app.use(express.json());
 
 app.use('/uploads', express.static('uploads')); // servir arquivos locais
 
-app.use('/api/audios', audioRoutes);
+app.use('/api', audioRoutes);
 
 // health check
-app.get('/', (req, res) => res.json({ status: 'ok', service: 'kaiapo-audio-api' }));
+app.get('/', (_req, res) => res.json({ status: 'ok', service: 'kaiapo-audio-api' }));
 
 module.exports = app;
