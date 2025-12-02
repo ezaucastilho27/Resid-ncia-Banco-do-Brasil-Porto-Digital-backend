@@ -65,12 +65,13 @@ Clone o projeto
 Entre no diretório do projeto
 
 ```bash
-  cd my-project
+  cd Resid-ncia-Banco-do-Brasil-Porto-Digital-backend
+  cd kaiapo-audio-api-full
 ```
 
 Criar .env
 ```
-cp .env.example .env
+touch .env
 ```
 
 Instalar dependências
@@ -104,13 +105,17 @@ POST /api/audios
 ```
 GET /api/audios
 ```
+#### Listagem de áudios por serviço
+```
+GET /api/audios/:serviceId
+```
 #### Detalhes de áudio
 ```
-GET /api/audios/:id
+GET /api/audio/:id
 ```
 #### Streaming de áudio
 ```
-GET /api/audios/url/:filename
+GET /api/url/:filename
 ```
 
 ### Serviços

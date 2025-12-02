@@ -23,7 +23,7 @@ router.get('/audios', audioController.listAudios);
 router.get('/url/:filename', audioController.streamOrRedirect);
 
 // GET lista por serviço
-router.get('/service/:serviceId', audioController.listAudioByService)
+router.get('/audios/:serviceId', audioController.listAudioByService)
 
 // GET detalhes
 router.get('/audio/:id', audioController.getAudio);
