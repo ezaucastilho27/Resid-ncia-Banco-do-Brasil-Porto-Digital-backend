@@ -3,6 +3,7 @@ const Service = require("../models/Service");
 exports.addService = async (req, res) => {
   try {
     const { name, icon, videoURL } = req.body;
+    console.log(name, icon, videoURL);
 
     if (!name || !icon || !videoURL) {
       return res.status(400).json({ error: "Campos obrigatórios faltando" });
