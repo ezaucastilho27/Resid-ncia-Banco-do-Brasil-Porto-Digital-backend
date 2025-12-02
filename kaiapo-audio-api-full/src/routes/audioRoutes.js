@@ -14,7 +14,7 @@ router.post('/audio/:id/like/:action', audioController.likeAudio);
 router.post('/servicos', serviceController.addService)
 
 // GET lista
-router.get('/', audioController.listAudios);
+router.get('/audios', audioController.listAudios);
 
 // stream/redirect por filename
 router.get('/url/:filename', audioController.streamOrRedirect);

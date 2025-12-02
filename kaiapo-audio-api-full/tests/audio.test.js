@@ -20,11 +20,11 @@ afterAll(async () => {
 describe('Audio API (local uploads)', () => {
   test('should upload an audio and store metadata', async () => {
     const res = await request(app)
-      .post('/api/audios')
+      .post('/api')
       .field('name', 'Test User')
       .field('email', 'test@example.com')
       .field('agreePrivacy', 'true')
-      .field('community', 'kaiapo')
+      .field('community', 'kayapo')
       .field('service', 'Tutorial X')
       .attach('audio', path.join(__dirname, 'dummy.mp3'));
 
@@ -36,7 +36,7 @@ describe('Audio API (local uploads)', () => {
     // check DB saved
     const dbEntry = await Audio.findOne({ email: 'test@example.com' });
     expect(dbEntry).not.toBeNull();
-    expect(dbEntry.community).toBe('kaiapo');
+    expect(dbEntry.community).toBe('kayapo');
   });
 
   test('should list audios', async () => {
