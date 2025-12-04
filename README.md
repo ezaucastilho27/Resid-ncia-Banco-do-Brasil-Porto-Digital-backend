@@ -59,7 +59,7 @@ Se TODAS as variáveis acima existirem, o sistema ativa automaticamente o upload
 Clone o projeto
 
 ```bash
-  git clone https://link-para-o-projeto
+  git clone https://github.com/ezaucastilho27/Resid-ncia-Banco-do-Brasil-Porto-Digital-backend.git
 ```
 
 Entre no diretório do projeto
@@ -133,13 +133,13 @@ POST /api/services
 ```
 GET /api/services
 ```
-#### Editar tutorial específico
+#### Atualizar informações de Serviço
 ```
-PUT /api/services/:id
+PATCH /api/services/:serviceId
 ```
 #### Remover tutorial específico
 ```
-DELETE /api/services/:id
+DELETE /api/services/:serviceId
 ```
 ## Docker (local testing)
 Subir com Docker Compose (vai iniciar MongoDB + API):

@@ -65,7 +65,7 @@ Clone o projeto
 Entre no diretório do projeto
 
 ```bash
-  cd my-project
+  cd Resid-ncia-Banco-do-Brasil-Porto-Digital-backend/kaiapo-audio-api-full
 ```
 
 Criar .env
@@ -89,7 +89,7 @@ npm run dev
 ### Áudios
 #### Upload de áudio
 ```
-POST /api/audios
+POST /api/audio
 ```
 | Parâmetro |	Tipo | 	Descrição |
 | :--------- | :--------- | :---------------------------------- |
@@ -106,12 +106,18 @@ GET /api/audios
 ```
 #### Detalhes de áudio
 ```
-GET /api/audios/:id
+GET /api/audio/:id
 ```
 #### Streaming de áudio
 ```
-GET /api/audios/url/:filename
+GET /api/url/:filename
 ```
+#### Adicionar ou retirar like em audio
+```
+POST /audio/:id/like/:action
+```
+`:action` pode ser 1 ou -1, para indicar soma ou subtração de total de likes da entidade Audio.
+
 
 ### Serviços
 #### Adicionar serviço
@@ -128,10 +134,7 @@ POST /api/services
 ```
 GET /api/services
 ```
-#### Editar tutorial específico
-```
-PUT /api/services/:id
-```
+
 #### Remover tutorial específico
 ```
 DELETE /api/services/:id
@@ -148,8 +151,6 @@ Garanta que um MongoDB de teste esteja rodando localmente (padrão: mongodb://12
 Rode:
 ```
 npm install
-```
-```
 npm test
 ```
 Os testes utilizam um banco kayapo_audio_test e um arquivo de áudio de exemplo em tests/dummy.mp3.
