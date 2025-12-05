@@ -16,6 +16,9 @@ router.post('/services', serviceController.addService);
 // DELETE serviço
 router.delete('/services/:serviceId', serviceController.deleteService);
 
+//DELETE audio
+router.delete('/audio/:id', audioController.deleteAudio)
+
 //PATCH serviço
 router.patch('/services/:serviceId', serviceController.updateService);
 

@@ -70,7 +70,7 @@ Entre no diretório do projeto
 
 Criar .env
 ```
-cp .env.example .env
+touch .env
 ```
 
 Instalar dependências
